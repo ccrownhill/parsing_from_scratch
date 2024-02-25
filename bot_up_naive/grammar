@@ -1,0 +1,9 @@
+expr: expr T_PLUS term
+    | expr T_MINUS term
+    | term
+
+term: term T_TIMES factor
+    | factor
+
+factor: T_LBRACKET expr T_RBRACKET
+      | T_NUMBER
